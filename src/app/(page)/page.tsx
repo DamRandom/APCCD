@@ -2,25 +2,28 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SystemOverview from "../components/SystemOverview";
 import DataCleaning from "../components/DataCleaning";
+import FriedmanTest from "../components/FriedmanTest";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col bg-[#1f1f1f] text-gray-200"> {/* Fondo gris claro para todo el layout */}
-      {/* Navbar */}
+    <div className="min-h-screen flex flex-col bg-[#1f1f1f] text-gray-200">
+      {/* Barra de navegación */}
       <Navbar />
 
-      {/* Main Content */}
-      <main className="flex-grow mt-16 px-8"> {/* Añadimos padding lateral */}
+      <main className="flex-grow mt-16 px-8">
         <section>
           <SystemOverview />
         </section>
         <section>
-          <DataCleaning/>
+          <DataCleaning />
         </section>
-        {children} {/* Aquí se sigue mostrando el contenido principal */}
+        <section>
+          <FriedmanTest />
+        </section>
+        {children}
       </main>
 
-      {/* Footer */}
+      {/* Pie de página */}
       <Footer />
     </div>
   );
