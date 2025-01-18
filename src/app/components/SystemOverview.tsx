@@ -2,59 +2,59 @@ const SystemOverview = () => {
   return (
     <div className="bg-[#1f1f1f] text-gray-200 pt-20 pb-10 px-8 mx-auto max-w-6xl space-y-8">
       
-      {/* Section: Model Overview */}
+      {/* Sección: Descripción de Modelos */}
       <section>
-        <h2 className="text-3xl font-semibold text-orange-400 mb-4">Model Overview</h2>
+        <h2 className="text-3xl font-semibold text-orange-400 mb-4">Descripción de Modelos</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <p className="text-gray-300 mb-4 text-justify">
-              <strong>Autoencoder</strong>: This model is used for unsupervised learning, where it tries to learn a compressed representation of the input data. It is mainly used for feature extraction or anomaly detection.
+              <strong>Autoencoder</strong>: Este modelo se utiliza para aprendizaje no supervisado, donde intenta aprender una representación comprimida de los datos de entrada. Principalmente se aplica en la extracción de características o detección de anomalías.
             </p>
             <p className="text-gray-300 mb-4 text-justify">
-              <strong>LSTM (Long Short-Term Memory)</strong>: LSTM is a type of recurrent neural network used primarily for time-series predictions. It captures long-term dependencies in sequential data, making it ideal for forecasting trends.
+              <strong>LSTM (Long Short-Term Memory)</strong>: LSTM es un tipo de red neuronal recurrente usada principalmente para predicciones de series temporales. Captura dependencias a largo plazo en datos secuenciales, lo que lo hace ideal para pronosticar tendencias.
             </p>
           </div>
           <div>
             <p className="text-gray-300 mb-4 text-justify">
-              <strong>CNN (Convolutional Neural Network)</strong>: CNNs are specialized in processing data with a grid-like structure, such as images. They are often used for tasks like classification or detecting patterns in spatial data.
+              <strong>CNN (Red Neuronal Convolucional)</strong>: Las CNN están especializadas en procesar datos con estructuras tipo rejilla, como imágenes. Frecuentemente se utilizan para tareas como clasificación o detección de patrones en datos espaciales.
             </p>
             <p className="text-gray-300 mb-4 text-justify">
-              <strong>ARIMA (AutoRegressive Integrated Moving Average)</strong>: ARIMA is a classical time-series forecasting model. It is effective for predicting future points in a series based on its own past values, often used in economics and finance.
+              <strong>ARIMA (Promedio Móvil Integrado Autorregresivo)</strong>: ARIMA es un modelo clásico para pronósticos de series temporales. Es eficaz para predecir puntos futuros en una serie basándose en sus valores pasados, utilizado a menudo en economía y finanzas.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Section: Data Loading */}
+      {/* Sección: Carga de Datos */}
       <section>
-        <h2 className="text-3xl font-semibold text-orange-400 mb-4">Data Loading</h2>
+        <h2 className="text-3xl font-semibold text-orange-400 mb-4">Carga de Datos</h2>
         <div className="space-y-6 text-gray-300">
           <p className="text-justify">
-            The data is loaded from a CSV file called <strong>claustro.csv</strong>, which contains various variables that are used for predictions. The file consists of several key columns that are critical for the model’s input and output. Let’s break them down:
+            Los datos se cargan desde un archivo CSV llamado <strong>claustro.csv</strong>, que contiene varias variables utilizadas para las predicciones. El archivo incluye columnas clave que son esenciales para los insumos y resultados del modelo. Veamos los detalles:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-orange-400">Features</h3>
+              <h3 className="text-xl font-semibold text-orange-400">Características</h3>
               <p className="text-justify">
-                The <strong>Features</strong> are represented by columns <code>V1</code> to <code>V7</code>. These columns contain the input data that is used by the models to make predictions. Each of these variables represents specific aspects of the data that help the model understand and forecast patterns.
+                Las <strong>Características</strong> están representadas por las columnas <code>V1</code> a <code>V7</code>. Estas columnas contienen los datos de entrada que los modelos utilizan para realizar predicciones. Cada una de estas variables representa aspectos específicos de los datos que ayudan al modelo a comprender y prever patrones.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-orange-400">Target Variables</h3>
+              <h3 className="text-xl font-semibold text-orange-400">Variables Objetivo</h3>
               <p className="text-justify">
-                The <strong>Target Variables</strong> are found in columns <code>V8</code> to <code>V12</code>. These columns contain the output variables that the models aim to predict based on the features. The target variables are the key values the system is trying to estimate or forecast.
+                Las <strong>Variables Objetivo</strong> se encuentran en las columnas <code>V8</code> a <code>V12</code>. Estas columnas contienen las variables de salida que los modelos buscan predecir basándose en las características. Las variables objetivo son los valores clave que el sistema intenta estimar o pronosticar.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section: Metrics */}
+      {/* Sección: Métricas */}
       <section>
-        <h2 className="text-3xl font-semibold text-orange-400 mb-4">Metrics</h2>
+        <h2 className="text-3xl font-semibold text-orange-400 mb-4">Métricas</h2>
         <p className="text-gray-300 text-justify">
-          The models are evaluated based on performance metrics like Mean Squared Error (MSE), 
-          Mean Absolute Error (MAE), and Mean Absolute Percentage Error (MAPE). These metrics help to understand how well the models perform on the given dataset.
+          Los modelos se evalúan basándose en métricas de rendimiento como el Error Cuadrático Medio (MSE), 
+          el Error Absoluto Medio (MAE) y el Error Porcentual Absoluto Medio (MAPE). Estas métricas ayudan a comprender qué tan bien funcionan los modelos con el conjunto de datos dado.
         </p>
       </section>
 

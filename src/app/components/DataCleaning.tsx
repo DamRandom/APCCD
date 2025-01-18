@@ -5,17 +5,16 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import { useEffect, useState } from 'react';
 import { ChartData } from 'chart.js';
 
-// Register chart elements
+// Registrar los elementos del gráfico
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const DataCleaning = () => {
-    // Permitir que el estado sea null o de tipo ChartData
     const [data, setData] = useState<ChartData<'line', number[], string> | null>(null);
-    const [error, setError] = useState<string | null>(null); // Para manejar errores de carga
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         try {
-            // Datos de la tabla
+            // Configuración de los datos para el gráfico
             const dataSet: ChartData<'line', number[], string> = {
                 labels: ['2011-1', '2011-2', '2012-1'],
                 datasets: [
@@ -107,49 +106,45 @@ const DataCleaning = () => {
             };
             setData(dataSet);
         } catch {
-            setError('Error loading chart data.');
+            setError('Error al cargar los datos del gráfico.');
         }
     }, []);
 
     return (
         <div className="bg-[#1f1f1f] text-gray-200 pt-20 pb-10 px-8 mx-auto max-w-6xl space-y-8">
-            {/* Section: Data Overview */}
             <section>
-                <h2 className="text-3xl font-semibold text-orange-400 mb-4">Data Cleaning / Preprocessing and Transformation</h2>
+                <h2 className="text-3xl font-semibold text-orange-400 mb-4">Limpieza y Transformación de Datos</h2>
                 <p className="text-gray-300 text-justify">
-                    The dataset begins with the following rows, which provide an overview of the data structure:
+                    El conjunto de datos comienza con las siguientes filas, lo que proporciona una visión general de su estructura:
                 </p>
                 <pre className="bg-[#2c2c2c] text-gray-200 p-4 rounded-md">
                     {`V1  V2  V3  V4  V5  V6  V7  V8  V9  V10  V11  V12
   2011  1   41  102 641 1014 1798 37  99  583  923  1642
   2011  2   37  99  583 923  1642 33  96  521  709  1359
-  2012  1   33  96  521 709  1359 31  96  498  525  1150`}</pre>
+  2012  1   33  96  521 709  1359 31  96  498  525  1150`}
+                </pre>
 
                 <div className="mt-6">
-                    <h3 className="text-xl font-semibold text-orange-400">Plot of the Data</h3>
+                    <h3 className="text-xl font-semibold text-orange-400">Gráfico de los Datos</h3>
                     <p className="text-gray-300 mb-4 text-justify">
-                        Below is a plot showing the trend of the variables from V1 to V12, which provides insights into the overall behavior of the data:
+                        A continuación, se muestra un gráfico que ilustra la tendencia de las variables de V1 a V12, proporcionando información sobre el comportamiento general de los datos:
                     </p>
                     {error ? (
                         <p className="text-red-500">{error}</p>
                     ) : data ? (
                         <Line data={data} width={700} height={500} />
                     ) : (
-                        <p>Loading chart...</p>
+                        <p>Cargando gráfico...</p>
                     )}
                 </div>
             </section>
 
-            {/* Culmination Section */}
             <section>
-                <h3 className="text-xl font-semibold text-orange-400">Purpose of Data Visualization</h3>
+                <h3 className="text-xl font-semibold text-orange-400">Propósito de la Visualización</h3>
                 <p className="text-gray-300 text-justify">
-                    The above graph provides a visual representation of the dataset, which allows us to analyze the trends of various variables over time. This visualization is essential in the context of data preprocessing and transformation, as it helps to identify any outliers, trends, or patterns that need to be addressed during further steps in the analysis process.
+                    El gráfico anterior proporciona una representación visual del conjunto de datos, permitiendo analizar las tendencias de las variables en el tiempo. Esto es crucial en la etapa de limpieza y transformación de datos, ayudando a identificar posibles valores atípicos, tendencias o patrones que deben abordarse en análisis posteriores.
                 </p>
             </section>
-
-            {/* Rest of the sections */}
-            {/* ... */}
         </div>
     );
 };

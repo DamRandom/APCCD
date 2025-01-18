@@ -4,17 +4,17 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 py-6 mt-16">
       <div className="container mx-auto px-6 text-center">
-        {/* Main Text */}
+        {/* Texto principal */}
         <p className="text-sm">
-          &copy; 2025 APCCD. All rights reserved.
+          &copy; 2025 APCCD. Todos los derechos reservados.
         </p>
 
-        {/* Secondary Text */}
+        {/* Texto secundario */}
         <p className="text-xs mt-2 text-gray-500">
-          Designed to assist in predictive analysis of faculty composition at UCI.
+          Diseñado para asistir en el análisis predictivo de la composición del claustro docente en la UCI.
         </p>
 
-        {/* Links */}
+        {/* Enlaces */}
         <div className="flex justify-center gap-6 mt-4">
           <a
             href="https://example.com"
@@ -22,7 +22,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-orange-400 transition-colors duration-200"
           >
-            Privacy Policy
+            Política de Privacidad
           </a>
           <a
             href="https://example.com"
@@ -30,7 +30,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-orange-400 transition-colors duration-200"
           >
-            Terms of Service
+            Términos de Servicio
           </a>
         </div>
       </div>
