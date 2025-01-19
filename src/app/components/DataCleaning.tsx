@@ -117,12 +117,70 @@ const DataCleaning = () => {
                 <p className="text-gray-300 text-justify">
                     El conjunto de datos comienza con las siguientes filas, lo que proporciona una visión general de su estructura:
                 </p>
-                <pre className="bg-[#2c2c2c] text-gray-200 p-4 rounded-md">
-                    {`V1  V2  V3  V4  V5  V6  V7  V8  V9  V10  V11  V12
-  2011  1   41  102 641 1014 1798 37  99  583  923  1642
-  2011  2   37  99  583 923  1642 33  96  521  709  1359
-  2012  1   33  96  521 709  1359 31  96  498  525  1150`}
-                </pre>
+                <div className="overflow-x-auto mt-6 bg-[#2c2c2c] p-4 rounded-md">
+                    <table className="min-w-full text-sm text-gray-300">
+                        <thead>
+                            <tr className="border-b border-[#333]">
+                                <th className="py-2 px-4 text-left">V1</th>
+                                <th className="py-2 px-4 text-left">V2</th>
+                                <th className="py-2 px-4 text-left">V3</th>
+                                <th className="py-2 px-4 text-left">V4</th>
+                                <th className="py-2 px-4 text-left">V5</th>
+                                <th className="py-2 px-4 text-left">V6</th>
+                                <th className="py-2 px-4 text-left">V7</th>
+                                <th className="py-2 px-4 text-left">V8</th>
+                                <th className="py-2 px-4 text-left">V9</th>
+                                <th className="py-2 px-4 text-left">V10</th>
+                                <th className="py-2 px-4 text-left">V11</th>
+                                <th className="py-2 px-4 text-left">V12</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="py-2 px-4">2011</td>
+                                <td className="py-2 px-4">1</td>
+                                <td className="py-2 px-4">41</td>
+                                <td className="py-2 px-4">102</td>
+                                <td className="py-2 px-4">641</td>
+                                <td className="py-2 px-4">1014</td>
+                                <td className="py-2 px-4">1798</td>
+                                <td className="py-2 px-4">37</td>
+                                <td className="py-2 px-4">99</td>
+                                <td className="py-2 px-4">583</td>
+                                <td className="py-2 px-4">923</td>
+                                <td className="py-2 px-4">1642</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2 px-4">2011</td>
+                                <td className="py-2 px-4">2</td>
+                                <td className="py-2 px-4">37</td>
+                                <td className="py-2 px-4">99</td>
+                                <td className="py-2 px-4">583</td>
+                                <td className="py-2 px-4">923</td>
+                                <td className="py-2 px-4">1642</td>
+                                <td className="py-2 px-4">33</td>
+                                <td className="py-2 px-4">96</td>
+                                <td className="py-2 px-4">521</td>
+                                <td className="py-2 px-4">709</td>
+                                <td className="py-2 px-4">1359</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2 px-4">2012</td>
+                                <td className="py-2 px-4">1</td>
+                                <td className="py-2 px-4">33</td>
+                                <td className="py-2 px-4">96</td>
+                                <td className="py-2 px-4">521</td>
+                                <td className="py-2 px-4">709</td>
+                                <td className="py-2 px-4">1359</td>
+                                <td className="py-2 px-4">31</td>
+                                <td className="py-2 px-4">96</td>
+                                <td className="py-2 px-4">498</td>
+                                <td className="py-2 px-4">525</td>
+                                <td className="py-2 px-4">1150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <div className="mt-6">
                     <h3 className="text-xl font-semibold text-orange-400">Gráfico de los Datos</h3>

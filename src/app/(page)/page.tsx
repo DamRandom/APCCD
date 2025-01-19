@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import SystemOverview from "../components/SystemOverview";
 import DataCleaning from "../components/DataCleaning";
 import FriedmanTest from "../components/FriedmanTest";
+import ModelPredictions from "../components/ModelPredictions";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -19,6 +20,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </section>
         <section>
           <FriedmanTest />
+        </section>
+        <section>
+          <ModelPredictions />
         </section>
         {children}
       </main>
