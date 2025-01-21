@@ -15,29 +15,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Navbar />
 
       <main className="flex-grow mt-16 px-8">
-        <section>
+        <section id="system-overview">
           <SystemOverview />
         </section>
-        <section>
+        <section id="data-cleaning">
           <DataCleaning />
         </section>
-        <section>
+        <section id="friedman-test">
           <FriedmanTest />
         </section>
-        <section>
+        <section id="model-predictions">
           <ModelPredictions />
         </section>
-        <section>
+        <section id="model-comparison">
           <ModelComparisonSection />
         </section>
-        <section>
+        <section id="performance-metrics">
           <PerformanceMetricsSection />
         </section>
-        <section>
+        <section id="statistical-analysis">
           <StatisticalAnalysisSection />
         </section>
         {children}
       </main>
+
 
       {/* Pie de página */}
       <Footer />
