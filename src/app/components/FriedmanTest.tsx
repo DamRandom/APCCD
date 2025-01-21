@@ -19,9 +19,9 @@ const FriedmanTest = () => {
                 {
                     label: 'Estadístico de Friedman',
                     data: [12.4, 15.3, 8.2, 10.5, 13.1, 7.6, 11.3, 9.7, 14.6, 13.9, 8.5, 12.0], // Valores del estadístico para cada variable
-                    backgroundColor: 'rgba(255, 140, 0, 0.2)', // Color naranja tenue con baja opacidad
-                    borderColor: 'rgba(255, 140, 0, 0.8)', // Color naranja sólido con mayor opacidad
-                    borderWidth: 1, // Ancho del borde de las barras
+                    backgroundColor: 'rgba(70, 177, 226, 0.3)', 
+                    borderColor: '#46b1e2', 
+                    borderWidth: 1, 
                 },
             ],
         };
@@ -32,7 +32,7 @@ const FriedmanTest = () => {
         <div className="bg-[#1f1f1f] text-gray-200 pt-20 pb-10 px-8 mx-auto max-w-6xl space-y-8">
             {/* Sección: Aplicación del Test de Friedman */}
             <section>
-                <h2 className="text-3xl font-semibold text-orange-400 mb-4">Aplicación del Test de Friedman</h2>
+                <h2 className="text-3xl font-semibold text-blue-400 mb-4">Aplicación del Test de Friedman</h2>
                 <p className="text-gray-300 text-justify">
                     En este paso, se aplica el Test de Friedman para evaluar si existen diferencias significativas entre las variables. La hipótesis nula establece que todas las variables tienen la misma distribución, mientras que la hipótesis alternativa indica que al menos una variable difiere significativamente.
                 </p>
@@ -43,7 +43,7 @@ Hipótesis Alternativa: Al menos una variable difiere significativamente.`}
                 </pre>
 
                 <div className="mt-6">
-                    <h3 className="text-xl font-semibold text-orange-400">Gráfico del Estadístico de Friedman</h3>
+                    <h3 className="text-xl font-semibold text-blue-400">Gráfico del Estadístico de Friedman</h3>
                     <p className="text-gray-300 mb-4 text-justify">
                         A continuación, se presenta un gráfico de barras que representa el estadístico de Friedman para cada variable. Esta visualización permite identificar qué variables muestran diferencias significativas según los resultados del test.
                     </p>

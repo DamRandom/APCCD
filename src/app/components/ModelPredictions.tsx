@@ -14,16 +14,16 @@ const PrediccionesResumen = () => {
     }, []);
 
     return (
-        <div className="bg-[#1f1f1f] text-gray-200 pt-20 pb-10 px-8 mx-auto max-w-6xl space-y-8">
+        <div className="bg-[#1f1f1f] text-gray-200 pt-20 pb-10 px-8 mx-auto max-w-6xl space-y-12">
             <section>
-                <h2 className="text-3xl font-semibold text-orange-400 mb-4">Resumen de Predicciones</h2>
+                <h2 className="text-3xl font-semibold text-blue-400 text-center">Resumen de Predicciones</h2>
                 <p className="text-gray-300 text-justify">
                     Esta sección presenta las capacidades predictivas del sistema utilizando cuatro modelos distintos: AutoARIMA, Redes Neuronales Convolucionales (CNNs), Memoria a Largo Corto Plazo (LSTM) y Autoencoders. Cada modelo está diseñado para predecir métricas clave (V8 a V12) para el segundo semestre de 2024. A continuación se muestra un desglose detallado de las predicciones generadas por cada modelo.
                 </p>
             </section>
 
             <section>
-                <h3 className="text-xl font-semibold text-orange-400">AutoARIMA</h3>
+                <h3 className="text-xl font-semibold text-blue-400">AutoARIMA</h3>
                 <p className="text-gray-300 text-justify">
                     AutoARIMA se utilizó para generar predicciones mediante la identificación automática de los parámetros óptimos para los modelos ARIMA, considerando la estacionalidad y reduciendo restricciones de complejidad (por ejemplo, el orden máximo establecido en 5). El modelo ajustó iterativamente las primeras cuatro variables (V8 a V11), mientras que la predicción para V12 se calculó como la suma de estas variables.
                 </p>
@@ -62,7 +62,7 @@ const PrediccionesResumen = () => {
             </section>
 
             <section>
-                <h3 className="text-xl font-semibold text-orange-400">CNN (Redes Neuronales Convolucionales)</h3>
+                <h3 className="text-xl font-semibold text-blue-400">CNN (Redes Neuronales Convolucionales)</h3>
                 <p className="text-gray-300 text-justify">
                     La arquitectura CNN se entrenó utilizando ventanas deslizantes del conjunto de datos, con un tamaño de ventana de tres observaciones. El modelo utilizó capas convolucionales, max pooling y capas densas para extraer patrones de los datos. Se generaron predicciones para V8 a V11, mientras que V12 se derivó como la suma de estas variables.
                 </p>
@@ -101,7 +101,7 @@ const PrediccionesResumen = () => {
             </section>
 
             <section>
-                <h3 className="text-xl font-semibold text-orange-400">AutoEncoders</h3>
+                <h3 className="text-xl font-semibold text-blue-400">AutoEncoders</h3>
                 <p className="text-gray-300 text-justify">
                     Se utilizaron AutoEncoders para aprender representaciones latentes comprimidas de los datos, permitiendo una predicción eficiente de futuras observaciones. Un decodificador feedforward reconstruyó las predicciones para V8 a V11, mientras que V12 se calculó como la suma de estas variables. El modelo integró restricciones adicionales para asegurar resultados no negativos y evitar inconsistencias en la lógica de la suma.
                 </p>
@@ -140,7 +140,7 @@ const PrediccionesResumen = () => {
             </section>
 
             <section>
-                <h3 className="text-xl font-semibold text-orange-400">LSTM (Memoria a Largo Corto Plazo)</h3>
+                <h3 className="text-xl font-semibold text-blue-400">LSTM (Memoria a Largo Corto Plazo)</h3>
                 <p className="text-gray-300 text-justify">
                     Se emplearon modelos LSTM, diseñados para datos de series temporales, para capturar dependencias temporales y patrones entre las variables. Usando un enfoque secuencia a secuencia, las predicciones se calcularon iterativamente para cada variable objetivo. La regla de suma se aplicó para derivar V12 a partir de las predicciones de V8 a V11.
                 </p>
@@ -167,20 +167,18 @@ const PrediccionesResumen = () => {
                             </tr>
                             <tr>
                                 <td className="px-4 py-2">V11</td>
-                                <td className="px-4 py-2">42</td>
+                                <td className="px-4 py-2">78</td>
                             </tr>
                             <tr>
                                 <td className="px-4 py-2">V12</td>
-                                <td className="px-4 py-2">431</td>
+                                <td className="px-4 py-2">467</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            {error && (
-                <div className="text-red-500 text-center mt-8">{error}</div>
-            )}
+            {error && <p className="text-red-500">{error}</p>}
         </div>
     );
 };

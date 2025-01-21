@@ -20,7 +20,7 @@ export default function Footer() {
             href="https://example.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-orange-400 transition-colors duration-200"
+            className="hover:text-blue-400 transition-colors duration-200"
           >
             Política de Privacidad
           </a>
@@ -28,7 +28,7 @@ export default function Footer() {
             href="https://example.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-orange-400 transition-colors duration-200"
+            className="hover:text-blue-400 transition-colors duration-200"
           >
             Términos de Servicio
           </a>

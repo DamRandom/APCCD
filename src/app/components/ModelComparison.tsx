@@ -26,29 +26,29 @@ const ModelComparisonSection = () => {
         {
           label: 'AutoARIMA',
           data: originalData.autoarima,
-          backgroundColor: 'rgba(242, 143, 59, 0.7)', // Naranja
-          borderColor: 'rgba(193, 114, 47, 1)', // Más oscuro
+          backgroundColor: 'rgba(48, 97, 181, 0.7)', // Azul oscuro
+          borderColor: 'rgba(25, 50, 112, 1)', // Azul más oscuro
           borderWidth: 1,
         },
         {
           label: 'LSTM',
           data: originalData.lstm,
-          backgroundColor: 'rgba(210, 214, 141, 0.7)', // Amarillo oliva
-          borderColor: 'rgba(168, 171, 113, 1)', // Más oscuro
+          backgroundColor: 'rgba(72, 130, 180, 0.7)', // Azul medio
+          borderColor: 'rgba(49, 85, 120, 1)', // Azul más oscuro
           borderWidth: 1,
         },
         {
           label: 'CNN',
           data: originalData.cnn,
-          backgroundColor: 'rgba(217, 249, 165, 0.7)', // Verde claro
-          borderColor: 'rgba(174, 199, 132, 1)', // Más oscuro
+          backgroundColor: 'rgba(111, 161, 220, 0.7)', // Azul claro
+          borderColor: 'rgba(78, 132, 188, 1)', // Azul más oscuro
           borderWidth: 1,
         },
         {
           label: 'Autoencoder',
           data: originalData.autoencoder,
-          backgroundColor: 'rgba(244, 254, 193, 0.7)', // Amarillo pálido
-          borderColor: 'rgba(195, 203, 155, 1)', // Más oscuro
+          backgroundColor: 'rgba(137, 185, 243, 0.7)', // Azul pálido
+          borderColor: 'rgba(94, 132, 180, 1)', // Azul más oscuro
           borderWidth: 1,
         },
       ],
@@ -67,7 +67,7 @@ const ModelComparisonSection = () => {
 
   return (
     <section className="bg-[#1f1f1f] text-gray-200 pt-20 pb-10 px-8 mx-auto max-w-6xl space-y-12">
-      <h2 className="text-3xl font-semibold text-orange-400 text-center">Resultados de Comparación de Modelos</h2>
+      <h2 className="text-3xl font-semibold text-blue-400 text-center">Resultados de Comparación de Modelos</h2>
 
       <p className="text-gray-300 text-justify">
         Esta sección presenta las predicciones realizadas por diferentes modelos (AutoARIMA, LSTM, CNN y Autoencoder) para varias variables de salida.
@@ -100,7 +100,7 @@ const ModelComparisonSection = () => {
       </div>
 
       <div>
-        <h3 className="text-2xl font-semibold text-orange-400 text-center">Comparación Visual de Predicciones</h3>
+        <h3 className="text-2xl font-semibold text-blue-400 text-center">Comparación Visual de Predicciones</h3>
         <p className="text-gray-300 text-justify mt-4">
           El siguiente gráfico de barras compara los valores predichos por cada modelo para las diferentes variables de salida. Los valores se muestran tal como son, manteniendo su escala original.
         </p>

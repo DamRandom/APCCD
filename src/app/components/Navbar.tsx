@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800 text-gray-100 fixed top-0 w-full z-50 shadow-md">
+    <nav className="bg-[#1f1f1f] text-[#e4e4e4] fixed top-0 w-full z-50 shadow-lg">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo/Marca */}
-        <div className="text-xl font-semibold text-orange-400">
+        <div className="text-xl font-semibold text-[#2678ae]">
           APCCD
         </div>
 
@@ -14,7 +14,7 @@ export default function Navbar() {
           <li>
             <a
               href="#home"
-              className="hover:text-orange-400 transition-colors duration-200"
+              className="hover:bg-[#2678ae] hover:text-[#e4e4e4] transition-colors duration-200 px-4 py-2 rounded-lg"
             >
               Inicio
             </a>
@@ -22,7 +22,7 @@ export default function Navbar() {
           <li>
             <a
               href="#features"
-              className="hover:text-orange-400 transition-colors duration-200"
+              className="hover:bg-[#2678ae] hover:text-[#e4e4e4] transition-colors duration-200 px-4 py-2 rounded-lg"
             >
               Características
             </a>
@@ -30,7 +30,7 @@ export default function Navbar() {
           <li>
             <a
               href="#about"
-              className="hover:text-orange-400 transition-colors duration-200"
+              className="hover:bg-[#2678ae] hover:text-[#e4e4e4] transition-colors duration-200 px-4 py-2 rounded-lg"
             >
               Acerca de
             </a>
@@ -38,7 +38,7 @@ export default function Navbar() {
           <li>
             <a
               href="#contact"
-              className="hover:text-orange-400 transition-colors duration-200"
+              className="hover:bg-[#2678ae] hover:text-[#e4e4e4] transition-colors duration-200 px-4 py-2 rounded-lg"
             >
               Contacto
             </a>

@@ -113,7 +113,7 @@ const DataCleaning = () => {
     return (
         <div className="bg-[#1f1f1f] text-gray-200 pt-20 pb-10 px-8 mx-auto max-w-6xl space-y-8">
             <section>
-                <h2 className="text-3xl font-semibold text-orange-400 mb-4">Limpieza y Transformación de Datos</h2>
+                <h2 className="text-3xl font-semibold text-blue-400 mb-4">Limpieza y Transformación de Datos</h2>
                 <p className="text-gray-300 text-justify">
                     El conjunto de datos comienza con las siguientes filas, lo que proporciona una visión general de su estructura:
                 </p>
@@ -183,7 +183,7 @@ const DataCleaning = () => {
                 </div>
 
                 <div className="mt-6">
-                    <h3 className="text-xl font-semibold text-orange-400">Gráfico de los Datos</h3>
+                    <h3 className="text-xl font-semibold text-blue-400">Gráfico de los Datos</h3>
                     <p className="text-gray-300 mb-4 text-justify">
                         A continuación, se muestra un gráfico que ilustra la tendencia de las variables de V1 a V12, proporcionando información sobre el comportamiento general de los datos:
                     </p>
@@ -198,7 +198,7 @@ const DataCleaning = () => {
             </section>
 
             <section>
-                <h3 className="text-xl font-semibold text-orange-400">Propósito de la Visualización</h3>
+                <h3 className="text-xl font-semibold text-blue-400">Propósito de la Visualización</h3>
                 <p className="text-gray-300 text-justify">
                     El gráfico anterior proporciona una representación visual del conjunto de datos, permitiendo analizar las tendencias de las variables en el tiempo. Esto es crucial en la etapa de limpieza y transformación de datos, ayudando a identificar posibles valores atípicos, tendencias o patrones que deben abordarse en análisis posteriores.
                 </p>
