@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SystemOverview from "../components/SystemOverview";
@@ -9,6 +12,11 @@ import PerformanceMetricsSection from "../components/PerformanceMetrics";
 import StatisticalAnalysisSection from "../components/StatisticalAnalysis";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    // Al cargar la página, hacer scroll al principio
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-[#1f1f1f] text-gray-200">
       {/* Barra de navegación */}
@@ -38,7 +46,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </section>
         {children}
       </main>
-
 
       {/* Pie de página */}
       <Footer />

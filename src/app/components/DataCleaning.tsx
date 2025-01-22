@@ -189,19 +189,10 @@ const DataCleaning = () => {
                     </p>
                     {error ? (
                         <p className="text-red-500">{error}</p>
-                    ) : data ? (
-                        <Line data={data} width={700} height={500} />
                     ) : (
-                        <p>Cargando gráfico...</p>
+                        data && <Line data={data} />
                     )}
                 </div>
-            </section>
-
-            <section>
-                <h3 className="text-xl font-semibold text-blue-400">Propósito de la Visualización</h3>
-                <p className="text-gray-300 text-justify">
-                    El gráfico anterior proporciona una representación visual del conjunto de datos, permitiendo analizar las tendencias de las variables en el tiempo. Esto es crucial en la etapa de limpieza y transformación de datos, ayudando a identificar posibles valores atípicos, tendencias o patrones que deben abordarse en análisis posteriores.
-                </p>
             </section>
         </div>
     );

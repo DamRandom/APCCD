@@ -1,10 +1,29 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image'; // Importa el componente Image de Next.js
 
 export default function Navbar() {
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
+  const analysisRef = useRef<HTMLLIElement>(null); // Referencia al contenedor del menú
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Referencia al temporizador
+
+  // Función para manejar la apertura del menú
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current); // Limpia el temporizador anterior si existe
+    }
+    setIsAnalysisOpen(true); // Abre el menú inmediatamente
+  };
+
+  // Función para manejar la salida del mouse con un retraso
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      if (!analysisRef.current?.contains(document.querySelector(':hover'))) {
+        setIsAnalysisOpen(false); // Cierra el menú si el mouse no está sobre el menú ni el botón
+      }
+    }, 1000); // Retraso de 1 segundo
+  };
 
   return (
     <nav className="bg-[#1f1f1f] text-[#e4e4e4] fixed top-0 w-full z-50 shadow-lg">
@@ -15,10 +34,10 @@ export default function Navbar() {
         </div>
 
         {/* Enlaces de navegación */}
-        <ul className="flex gap-6 text-sm font-medium items-center"> {/* Agregado items-center para centrar verticalmente */}
+        <ul className="flex gap-6 text-sm font-medium items-center">
           <li>
             <a
-              href="#home"
+              href="#system-overview"
               className="hover:bg-[#2678ae] hover:text-[#e4e4e4] transition-colors duration-200 px-4 py-2 rounded-lg"
             >
               Inicio
@@ -26,8 +45,9 @@ export default function Navbar() {
           </li>
           <li
             className="relative"
-            onMouseEnter={() => setIsAnalysisOpen(true)}
-            onMouseLeave={() => setIsAnalysisOpen(false)}
+            ref={analysisRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <button
               className="flex items-center hover:bg-[#2678ae] hover:text-[#e4e4e4] transition-colors duration-200 px-4 py-2 rounded-lg focus:outline-none"
